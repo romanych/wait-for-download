@@ -29,6 +29,7 @@ In order to install WaitForDownload plugin you just need perform two easy steps:
 + Add script to page. You can put in anywhere.
 `<script type="text/javascript" src="js/wait-for-download.js"></script>`
 + Add attribute `data-wfd` to elements will cause download action. You can use only `a` and `form` tags with this attribute.
+`<a href="downloadReport.php" data-wft>Download report</a>`
 
 This is it! Click on link and download will start in new window.
 
@@ -62,7 +63,8 @@ There are two ways to change this value.
 It is easier to show an example, then explain. For instance, you need to override text *Please wait for download starting*.
 Just add following attribute to link
 
-	data-wfd-text-wait="Usually it takes about 5 minutes to generate report. Please wait"
+	<a href="downloadReport.php" data-wfd
+		data-wfd-text-wait="Usually it takes about 5 minutes to generate report. Please wait">Download report</a>
 
 ### 2. Setting new default values
 
@@ -77,6 +79,8 @@ Advanced usage
 --------------
 
 There is no so much advanced things in this plugin. Currently we support only pure JS initialization as well.
+
+	<a href="downloadReport.php" id="downloadReport">Download report</a>
 
 	WaitForDownload(
 		document.getElementById('downloadReport'), 
